@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirisha's AI Workflow Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Sirisha | AI Workflow Specialist</div>
+            <ul class="nav-links">
+                <li><a href="#workflow">Workflow</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Optimizing AI, One Prompt at a Time.</h1>
+                <p>I design and build intelligent workflows that unlock the true potential of AI.</p>
+            </div>
+        </section>
+
+        <section id="workflow" class="workflow">
+            <h2>My AI Workflow Optimization Process</h2>
+            <div class="workflow-diagram">
+                <div class="workflow-step" id="step1">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Initial Prompt</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="workflow-step" id="step2">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Analysis & Refinement</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="workflow-step" id="step3">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Iterative Testing</div>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="workflow-step" id="step4">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Optimized Output</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo">
+            <h2>Interactive Prompt Demo</h2>
+            <div class="demo-container">
+                <div class="prompt-input">
+                    <h3>Enter a simple prompt:</h3>
+                    <textarea id="prompt-textarea" placeholder="e.g., Describe a futuristic city"></textarea>
+                    <button id="optimize-btn" class="btn">Optimize &raquo;</button>
+                </div>
+                <div class="prompt-output">
+                    <h3>Optimized Prompt:</h3>
+                    <div id="optimized-prompt-output" class="output-box"></div>
+                    <h3>Resulting Output:</h3>
+                    <div id="resulting-output" class="output-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Let's build something intelligent together.</p>
+            <a href="mailto:sirishapaidi02@gmail.com" class="btn">sirishapaidi02@gmail.com</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Sirisha</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
