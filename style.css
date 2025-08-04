@@ -1,0 +1,237 @@
+:root {
+    --bg: #121212;
+    --primary: #00F2DE;
+    --secondary: #7B2CBF;
+    --text: #E0E0E0;
+    --card-bg: #1E1E1E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--primary);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text);
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary);
+}
+
+.workflow-diagram {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.workflow-step {
+    background-color: var(--card-bg);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 200px;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.workflow-step.active {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.step-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.arrow {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.prompt-input h3, .prompt-output h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+#prompt-textarea {
+    width: 100%;
+    height: 150px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    color: var(--text);
+    padding: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--bg);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.output-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 100px;
+    margin-bottom: 1rem;
+}
+
+.contact {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: var(--card-bg);
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--primary);
+    }
+    
+    .workflow-diagram {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+
+    .demo-container {
+        grid-template-columns: 1fr;
+    }
+}
