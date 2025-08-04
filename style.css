@@ -1,9 +1,6 @@
 :root {
-    --bg: #121212;
-    --primary: #00F2DE;
-    --secondary: #7B2CBF;
-    --text: #E0E0E0;
-    --card-bg: #1E1E1E;
+    --bg: #f5f5dc;
+    --text: #00008b;
 }
 
 * {
@@ -13,15 +10,24 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     background-color: var(--bg);
     color: var(--text);
     line-height: 1.6;
 }
 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .header {
-    background-color: var(--card-bg);
-    border-bottom: 1px solid var(--primary);
+    background-color: var(--bg);
+    border-bottom: 2px solid var(--text);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar {
@@ -29,14 +35,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .logo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--text);
 }
 
 .nav-links {
@@ -52,11 +56,6 @@ body {
     text-decoration: none;
     color: var(--text);
     font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--primary);
 }
 
 .hamburger {
@@ -72,133 +71,70 @@ body {
     background-color: var(--text);
 }
 
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 section {
-    margin-bottom: 4rem;
+    padding: 4rem 0;
 }
 
 .hero {
     text-align: center;
-    padding: 4rem 0;
 }
 
 .hero h1 {
     font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--primary);
-    text-shadow: 0 0 10px var(--primary);
+    margin-bottom: 0.5rem;
 }
 
 .hero p {
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    text-align: center;
-    color: var(--primary);
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 0.5rem;
 }
 
-.workflow-diagram {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.about ul {
+    list-style-position: inside;
+    padding-left: 1rem;
 }
 
-.workflow-step {
-    background-color: var(--card-bg);
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    width: 200px;
-    transition: all 0.3s ease;
-    opacity: 0.5;
-}
-
-.workflow-step.active {
-    opacity: 1;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--primary);
-}
-
-.step-number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-}
-
-.arrow {
-    font-size: 2rem;
-    color: var(--primary);
-}
-
-.demo-container {
+.skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
 
-.prompt-input h3, .prompt-output h3 {
-    margin-bottom: 1rem;
-    color: var(--secondary);
+.skill-card {
+    border: 2px solid var(--text);
+    padding: 1.5rem;
 }
 
-#prompt-textarea {
-    width: 100%;
-    height: 150px;
-    background-color: var(--card-bg);
-    border: 1px solid var(--secondary);
-    border-radius: 8px;
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact a {
     color: var(--text);
-    padding: 1rem;
-    font-family: 'Roboto Mono', monospace;
-    margin-bottom: 1rem;
 }
 
-.btn {
-    display: inline-block;
-    background-color: var(--primary);
-    color: var(--bg);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.socials {
+    margin-top: 1rem;
 }
 
-.btn:hover {
-    box-shadow: 0 0 10px var(--primary);
-}
-
-.output-box {
-    background-color: var(--card-bg);
-    border: 1px solid var(--secondary);
-    border-radius: 8px;
-    padding: 1rem;
-    min-height: 100px;
-    margin-bottom: 1rem;
-}
-
-.contact {
-    text-align: center;
+.socials a {
+    margin-right: 1rem;
 }
 
 .footer {
     text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--primary);
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 2px solid var(--text);
 }
 
 @media (max-width: 768px) {
@@ -216,22 +152,14 @@ h2 {
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: var(--card-bg);
+        background-color: var(--bg);
         width: 100%;
         padding: 1rem 0;
-        border-bottom: 1px solid var(--primary);
-    }
-    
-    .workflow-diagram {
-        flex-direction: column;
+        border-bottom: 2px solid var(--text);
     }
 
-    .arrow {
-        transform: rotate(90deg);
+    .nav-links.active li {
         margin: 1rem 0;
-    }
-
-    .demo-container {
-        grid-template-columns: 1fr;
+        text-align: center;
     }
 }
